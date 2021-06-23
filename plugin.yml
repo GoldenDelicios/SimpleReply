@@ -1,0 +1,28 @@
+name: SimpleReply
+main: org.slabserver.plugin.simplereply.SimpleReply
+version: 0.0.1-SNAPSHOT
+api-version: 1.15
+commands:
+  msg:
+    aliases:
+    - tell
+    - w
+    description: Sends a private message to another player.
+    usage: /msg <player> <message>
+    permission: simplyreply.msg
+    permission-message: You don't have permission simplyreply.msg
+  r:
+    aliases:
+    - reply
+    description: Sends a private message to the player that last messaged you.
+    usage: /r <message>
+    permission: simplyreply.reply
+    permission-message: You don't have permission simplyreply.reply
+
+permissions:
+  simplyreply.msg:
+    description: Allows you to run /msg.
+    default: true
+  simplyreply.reply:
+    description: Allows you to run /r.
+    default: true
